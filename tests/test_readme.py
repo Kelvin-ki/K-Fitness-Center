@@ -319,5 +319,75 @@ class TestReadmeEdgeCases(unittest.TestCase):
         self.assertEqual(len(h1_matches), 1, "README should have exactly one H1 heading")
 
 
+class TestReadmeClaudeCodeInstallation(unittest.TestCase):
+    """Claude Code installation section added in this PR must be accurate."""
+
+    def setUp(self):
+        self.content = read_readme()
+
+    def test_claude_code_installation_section_exists(self):
+        """'Claude Code Installation' section must be present."""
+        self.assertIn("## Claude Code Installation", self.content)
+
+    def test_npm_install_command_present(self):
+        """The npm global install command must appear verbatim."""
+        self.assertIn("npm install -g @anthropic-ai/claude-code@latest", self.content)
+
+    def test_package_name_is_anthropic_claude_code(self):
+        """The official package name @anthropic-ai/claude-code must be referenced."""
+        self.assertIn("@anthropic-ai/claude-code", self.content)
+
+    def test_verified_installed_version_present(self):
+        """The verified installed version string must appear."""
+        self.assertIn("2.1.185", self.content)
+
+    def test_version_string_format(self):
+        """Verified version must follow the 'X.Y.Z (Claude Code)' format."""
+        self.assertRegex(
+            self.content,
+            r"\d+\.\d+\.\d+ \(Claude Code\)",
+            msg="Version string must match 'X.Y.Z (Claude Code)' format",
+        )
+
+    def test_nodejs_minimum_version_requirement(self):
+        """Node.js 18 minimum version requirement must be documented."""
+        self.assertIn("Node.js 18", self.content)
+
+    def test_nodejs_environment_version_noted(self):
+        """The installed Node.js version (20.20.2) must be documented."""
+        self.assertIn("20.20.2", self.content)
+
+    def test_sudo_warning_present(self):
+        """Warning against using sudo with npm install must be present."""
+        self.assertIn("sudo", self.content)
+        # The instruction is to NOT use sudo; a prohibition must appear.
+        self.assertRegex(
+            self.content,
+            r"[Dd]o not use.*sudo|sudo.*not",
+            msg="A 'do not use sudo' instruction must be present",
+        )
+
+    def test_upgrade_command_present(self):
+        """The upgrade command must be documented."""
+        # Upgrade uses the same install command; verify it is referenced in context.
+        upgrade_pattern = re.search(
+            r"[Uu]pgrade.*npm install -g @anthropic-ai/claude-code@latest",
+            self.content,
+        )
+        self.assertIsNotNone(upgrade_pattern, "Upgrade instruction with npm command must be present")
+
+    def test_claude_version_command_present(self):
+        """'claude --version' must appear in the code block."""
+        self.assertIn("claude --version", self.content)
+
+    def test_installation_section_uses_bash_code_block(self):
+        """The install commands must be wrapped in a bash fenced code block."""
+        self.assertRegex(
+            self.content,
+            r"```bash[\s\S]+?npm install -g @anthropic-ai/claude-code@latest[\s\S]+?```",
+            msg="npm install command must be inside a ```bash ... ``` fenced block",
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
