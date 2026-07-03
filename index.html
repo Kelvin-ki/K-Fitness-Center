@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <main class="poster" aria-label="K Fitness Center automated content creation workflow">
@@ -235,6 +236,38 @@
           <div><b>◎ Data-Driven</b><span>AI optimizes for better results</span></div>
           <div><b>⚙ Scalable</b><span>Works for all platforms and campaigns</span></div>
         </div>
+      </section>
+
+      <section class="panel n8n-panel" aria-labelledby="n8n-title">
+        <div>
+          <h2 id="n8n-title" class="section-ribbon">7. n8n Automation Connection</h2>
+          <p class="n8n-intro">Send new member leads, content requests, and follow-up tasks directly into your n8n workflow.</p>
+        </div>
+        <form class="n8n-form" data-n8n-form data-webhook-url="YOUR-N8N-WEBHOOK-URL" aria-label="Send a request to n8n automation">
+          <label>
+            Name
+            <input name="name" type="text" placeholder="Customer name" required />
+          </label>
+          <label>
+            Phone
+            <input name="phone" type="tel" placeholder="09xxxxxxxxx" required />
+          </label>
+          <label>
+            Request Type
+            <select name="requestType" required>
+              <option value="membership">Membership inquiry</option>
+              <option value="private-coach">Private coach</option>
+              <option value="content-request">Content request</option>
+              <option value="follow-up">Follow-up task</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="3" placeholder="Tell n8n what to do next"></textarea>
+          </label>
+          <button type="submit">Send to n8n</button>
+          <p class="n8n-status" data-n8n-status role="status">Waiting for your n8n webhook URL.</p>
+        </form>
       </section>
 
       <footer class="poster-footer">
