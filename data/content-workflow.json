@@ -1,0 +1,72 @@
+{
+  "system_name": "K Fitness Center - Automated Content Creation System",
+  "tagline": "Automatically thinking topics, generating content, creating videos and images, publishing, and learning from performance.",
+  "workflow": [
+    {
+      "step": 1,
+      "name": "Topic Ideas",
+      "module": "AI Idea Generator",
+      "tasks": ["Trend analysis", "User interests", "Fitness calendar", "FAQs", "Surveys"],
+      "output": "Weekly content ideas"
+    },
+    {
+      "step": 2,
+      "name": "Content Planning",
+      "module": "AI Planner",
+      "tasks": ["Topic selection", "Content type", "Format: video or image", "Posting schedule"],
+      "output": "Approved content plan"
+    },
+    {
+      "step": 3,
+      "name": "Content Generation",
+      "module": "AI Content Writer",
+      "tasks": ["Script", "Title", "Description", "Key points", "Call to action"],
+      "output": "Ready-to-review copy and script"
+    },
+    {
+      "step": 4,
+      "name": "Image Generation",
+      "module": "AI Image Generator",
+      "tasks": ["Poster", "Thumbnail", "Infographic", "Exercise guide", "Branded visuals"],
+      "output": "Image asset brief or generated image"
+    },
+    {
+      "step": 5,
+      "name": "Video Generation",
+      "module": "AI Video Generator",
+      "tasks": ["Video script", "Voice over", "B-roll or stock clips", "Subtitles", "Effects"],
+      "output": "Video production brief or generated video"
+    },
+    {
+      "step": 6,
+      "name": "Publish and Distribute",
+      "module": "Auto Post System",
+      "tasks": ["Social media", "Website", "Email or newsletter"],
+      "output": "Published content"
+    }
+  ],
+  "feedback_loop": [
+    "Analytics and insights",
+    "User engagement",
+    "Content performance",
+    "AI learning and improvement",
+    "Auto optimization"
+  ],
+  "weekly_calendar": [
+    { "day": "Monday", "content_type": "Infographic", "topic": "Benefits of strength training", "channel": "Instagram / Facebook" },
+    { "day": "Tuesday", "content_type": "Short video", "topic": "HIIT workout in 15 minutes", "channel": "TikTok / Reels / Shorts" },
+    { "day": "Wednesday", "content_type": "Image post", "topic": "Healthy meal ideas", "channel": "Instagram / Facebook" },
+    { "day": "Thursday", "content_type": "Long video", "topic": "Beginner workout guide", "channel": "YouTube" },
+    { "day": "Friday", "content_type": "Tips post", "topic": "How to stay motivated", "channel": "Instagram / Facebook" },
+    { "day": "Saturday", "content_type": "Q&A / Poll", "topic": "Ask your trainer", "channel": "Instagram Stories / Telegram" },
+    { "day": "Sunday", "content_type": "Motivation post", "topic": "Be stronger than your excuses", "channel": "Instagram / Facebook" }
+  ],
+  "publishing_checklist": [
+    "Follow Question > Emotion > Trust > Offer > Close.",
+    "Include contact numbers when selling.",
+    "Include location or map when inviting customers to visit.",
+    "Verify prices and promotions against the source of truth.",
+    "Do not include medical diagnosis or guaranteed weight-loss results.",
+    "Advise customers with pain, injury, dizziness, or health issues to consult a qualified medical professional."
+  ]
+}
