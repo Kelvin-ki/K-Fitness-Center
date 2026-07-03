@@ -12,8 +12,8 @@ function setStatus(message, type = 'info') {
 form?.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  if (!N8N_WEBHOOK_URL || N8N_WEBHOOK_URL.includes('YOUR-N8N-WEBHOOK-URL')) {
-    setStatus('Please add your n8n production webhook URL in index.html first.', 'warning');
+  if (!N8N_WEBHOOK_URL) {
+    setStatus('Please add your n8n webhook URL in index.html first.', 'warning');
     return;
   }
 
@@ -37,6 +37,6 @@ form?.addEventListener('submit', async (event) => {
     form.reset();
     setStatus('Success! Your request was sent to n8n automation.', 'success');
   } catch (error) {
-    setStatus(`Could not send to n8n: ${error.message}`, 'error');
+    setStatus(`Could not send to n8n at ${N8N_WEBHOOK_URL}. Make sure your local workflow is active: ${error.message}`, 'error');
   }
 });

@@ -226,3 +226,11 @@ td:first-child { font-weight: 900; text-transform: uppercase; }
   .n8n-form { grid-template-columns: 1fr; }
   .n8n-status { grid-column: auto; }
 }
+
+.n8n-workflows-link {
+  display: inline-flex;
+  margin: 12px 26px 0;
+  color: #111;
+  font-weight: 900;
+  text-transform: uppercase;
+}

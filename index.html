@@ -241,9 +241,10 @@
       <section class="panel n8n-panel" aria-labelledby="n8n-title">
         <div>
           <h2 id="n8n-title" class="section-ribbon">7. n8n Automation Connection</h2>
-          <p class="n8n-intro">Send new member leads, content requests, and follow-up tasks directly into your n8n workflow.</p>
+          <p class="n8n-intro">Send new member leads, content requests, and follow-up tasks directly into your local n8n AI OS workflow.</p>
+          <a class="n8n-workflows-link" href="http://localhost:5678/home/workflows" target="_blank" rel="noreferrer">Open n8n workflows</a>
         </div>
-        <form class="n8n-form" data-n8n-form data-webhook-url="YOUR-N8N-WEBHOOK-URL" aria-label="Send a request to n8n automation">
+        <form class="n8n-form" data-n8n-form data-webhook-url="http://localhost:5678/webhook/kfitness-ai-os" aria-label="Send a request to n8n automation">
           <label>
             Name
             <input name="name" type="text" placeholder="Customer name" required />
@@ -266,7 +267,7 @@
             <textarea name="message" rows="3" placeholder="Tell n8n what to do next"></textarea>
           </label>
           <button type="submit">Send to n8n</button>
-          <p class="n8n-status" data-n8n-status role="status">Waiting for your n8n webhook URL.</p>
+          <p class="n8n-status" data-n8n-status role="status">Ready to send to http://localhost:5678/webhook/kfitness-ai-os.</p>
         </form>
       </section>
 
