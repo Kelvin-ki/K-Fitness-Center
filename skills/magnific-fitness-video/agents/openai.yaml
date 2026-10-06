@@ -1,0 +1,4 @@
+interface:
+  display_name: "Magnific Fitness Video"
+  short_description: "Create fitness reels with Magnific video tools"
+  default_prompt: "Use $magnific-fitness-video to create a food and training reel."
