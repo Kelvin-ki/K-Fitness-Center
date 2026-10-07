@@ -1,0 +1,22 @@
+{
+  "name": "k-fitness-center",
+  "version": "1.0.0",
+  "description": "K Fitness Center automated content creation system landing page and workflow tools.",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "serve": "python3 -m http.server 4173",
+    "n8n": "n8n",
+    "n8n:start": "n8n start",
+    "test": "python3 -m unittest discover -s tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "n8n": "^2.8.4"
+  },
+  "private": true
+}
